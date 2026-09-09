@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Aayushi Singh</title>
+<meta name="description" content="Capstone robot, pipelined processor with caches, and an FPGA Knight's Tour robot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="side">
+  <nav class="mux" aria-label="Site">
+    <div class="mux-inputs"><a href="index.html" data-code="00" data-name="home"><span class="code">00</span><span>home</span></a><a href="research.html" data-code="01" data-name="research"><span class="code">01</span><span>research</span></a><a href="projects.html" data-code="10" data-name="projects"><span class="code">10</span><span>projects</span></a><a href="experience.html" data-code="11" data-name="experience"><span class="code">11</span><span>experience</span></a></div>
+    <div class="mux-body" aria-hidden="true">
+      <svg class="mx" viewBox="0 0 114 160" preserveAspectRatio="none">
+        <path class="body" d="M1,9.6 L113,35.2 L113,124.8 L1,150.4 Z"/>
+        <path class="w" data-on="00" d="M1,18.7 H10 L26,39 H60"/>
+        <path class="w" data-on="01" d="M1,59.5 H10 L26,63 H60"/>
+        <path class="w" data-on="10" d="M1,100.5 H10 L26,87 H60"/>
+        <path class="w" data-on="11" d="M1,141.3 H10 L26,111 H60"/>
+        <path class="w s" data-on="00 01" d="M28,44 V154.8"/>
+        <path class="w s" data-on="10 11" d="M36,92 V172"/>
+        <path class="w s" data-on="10 11" d="M36,172 V180"/>
+        <path class="w s" data-on="00 10" d="M46,49 V154.8"/>
+        <path class="w s" data-on="01 11" d="M54,73 V172"/>
+        <path class="w s" data-on="01 11" d="M54,172 V180"/>
+        <path class="w s" data-on="10 11" d="M36,172 H28 V166"/>
+        <path class="w s" data-on="01 11" d="M54,172 H46 V166"/>
+        <circle class="d s" data-on="10 11" cx="36" cy="172" r="1.4"/>
+        <circle class="d s" data-on="01 11" cx="54" cy="172" r="1.4"/>
+        <path class="g s" data-on="00 01" d="M24,166 L32,166 L28,158 Z"/>
+        <circle class="g s" data-on="00 01" cx="28" cy="156.4" r="1.6"/>
+        <path class="g s" data-on="00 10" d="M42,166 L50,166 L46,158 Z"/>
+        <circle class="g s" data-on="00 10" cx="46" cy="156.4" r="1.6"/>
+        <path class="w s" data-on="00 01" d="M28,44 H60"/><circle class="d s" data-on="00 01" cx="28" cy="44" r="1.4"/>
+        <path class="w s" data-on="00 10" d="M46,49 H60"/><circle class="d s" data-on="00 10" cx="46" cy="49" r="1.4"/>
+        <path class="w s" data-on="00 01" d="M28,68 H60"/><circle class="d s" data-on="00 01" cx="28" cy="68" r="1.4"/>
+        <path class="w s" data-on="01 11" d="M54,73 H60"/><circle class="d s" data-on="01 11" cx="54" cy="73" r="1.4"/>
+        <path class="w s" data-on="10 11" d="M36,92 H60"/><circle class="d s" data-on="10 11" cx="36" cy="92" r="1.4"/>
+        <path class="w s" data-on="00 10" d="M46,97 H60"/><circle class="d s" data-on="00 10" cx="46" cy="97" r="1.4"/>
+        <path class="w s" data-on="10 11" d="M36,116 H60"/><circle class="d s" data-on="10 11" cx="36" cy="116" r="1.4"/>
+        <path class="w s" data-on="01 11" d="M54,121 H60"/><circle class="d s" data-on="01 11" cx="54" cy="121" r="1.4"/>
+        <path class="w" data-on="00" d="M76,44 H81 V74 H90"/>
+        <path class="w" data-on="01" d="M76,68 H83 V78 H90"/>
+        <path class="w" data-on="10" d="M76,92 H83 V82 H90"/>
+        <path class="w" data-on="11" d="M76,116 H81 V86 H90"/>
+        <path class="w" data-on="00 01 10 11" d="M101,80 H113"/>
+        <path class="g" data-on="00" d="M60,36 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="01" d="M60,60 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="10" d="M60,84 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="11" d="M60,108 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="00 01 10 11" d="M88,72 Q95,72 101,80 Q95,88 88,88 Q92,80 88,72 Z"/>
+      </svg>
+    </div>
+    <span class="mux-wire" aria-hidden="true"></span>
+  </nav>
+  <div class="links">
+    <a href="assets/Aayushi_Singh_Resume.pdf">
+      <span class="badge"><img src="assets/icons/resume.png" alt="" width="30" height="30"></span>
+      <span class="label">Resume</span>
+    </a>
+    <a href="mailto:aayushi.singh@wisc.edu">
+      <span class="badge"><img src="assets/icons/email.png" alt="" width="30" height="30"></span>
+      <span class="label">Email</span>
+    </a>
+    <a href="https://www.linkedin.com/in/aayushisingh030" target="_blank" rel="noopener">
+      <span class="badge"><img src="assets/icons/linkedin.png" alt="" width="30" height="30"></span>
+      <span class="label">LinkedIn</span>
+    </a>
+    <a href="https://github.com/singh-aayushi" target="_blank" rel="noopener">
+      <span class="badge"><img src="assets/icons/github.png" alt="" width="30" height="30"></span>
+      <span class="label">GitHub</span>
+    </a>
+  </div>
+</aside>
+
+<main>
+
+  <h1 class="page-title">Projects</h1>
+  <div class="grid">
+
+  <article class="chip">
+    <span class="notch"></span>
+    <div class="mark">PSOC 6</div>
+    <div class="head"><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <rect x="14" y="14" width="20" height="18" rx="2"/>
+  <circle cx="20" cy="22" r="1.6" fill="currentColor" stroke="none"/>
+  <circle cx="28" cy="22" r="1.6" fill="currentColor" stroke="none"/>
+  <path d="M24 14V8M24 8h4"/>
+  <circle cx="18" cy="38" r="3" class="r"/><circle cx="30" cy="38" r="3" class="r"/>
+</svg><div><h3>Runaway Alarm robot</h3><div class="sub">C · FreeRTOS · PCB Design</div></div></div>
+    <p>A two-wheeled, self-balancing alarm clock on a PSoC 6 that drives off when the alarm rings and has to be caught to stop it, built with FreeRTOS tasks for balancing, object avoidance, RTC, Bluetooth, the display, and motor control. Implemented PID-based balance and steering using IMU and time-of-flight sensor data for real-time control, and designed custom IMU, EEPROM, and magnetometer boards enabling full system integration and testing. The project won the Best Capstone Project Award.</p>
+  </article>
+
+  <article class="chip">
+    <span class="notch"></span>
+    <div class="mark">16-BIT ISA</div>
+    <div class="head"><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <rect x="6" y="14" width="36" height="20" rx="1.5"/>
+  <path d="M6 24h36" opacity=".5"/>
+  <path d="M15 14v20M24 14v20M33 14v20" opacity=".5"/>
+  <path d="M10 19h5v10h-5z" class="r" fill="currentColor" stroke="none" opacity=".9"/>
+</svg><div><h3>Pipelined processor with cache hierarchy</h3><div class="sub">Verilog · ModelSim</div></div></div>
+    <p>A 5-stage pipelined processor for a 16-bit ISA with branch flushing, hazard detection, and data forwarding, with 2-way set-associative instruction and data caches using LRU, write-through, and write-allocate. Developed directed testbenches in ModelSim to validate control hazards, data hazards, and cache miss-handling FSM behavior.</p>
+  </article>
+
+  <article class="chip">
+    <span class="notch"></span>
+    <div class="mark">FPGA</div>
+    <div class="head"><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <rect x="8" y="8" width="32" height="32" rx="2"/>
+  <path d="M16 8v32M24 8v32M32 8v32M8 16h32M8 24h32M8 32h32" opacity=".5"/>
+  <rect x="24" y="16" width="8" height="8" class="r" fill="currentColor" stroke="none" opacity=".9"/>
+</svg><div><h3>Knight's Tour robot on FPGA</h3><div class="sub">SystemVerilog · Quartus</div></div></div>
+    <p>An FPGA-based autonomous robot that solves the Knight's Tour on a 5×5 board. Designed a command processor state machine for movement, calibration, and tour execution with error correction from gyroscope and IR feedback, and a TourLogic block that maps the tour to hardware with 1-hot move memory. Built functional and post-synthesis testbenches, and reduced synthesized area by 12.5 percent while resolving timing and hold-time violations.</p>
+  </article>
+
+  <article class="chip">
+    <span class="notch"></span>
+    <div class="mark">MSP432</div>
+    <div class="head"><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <rect x="6" y="14" width="36" height="20" rx="6"/>
+  <path d="M15 20v8M11 24h8"/>
+  <circle cx="32" cy="22" r="1.6" fill="currentColor" stroke="none"/><circle cx="36" cy="26" r="1.6" class="r" fill="currentColor" stroke="none"/>
+</svg><div><h3>Press Your Luck, two-player</h3><div class="sub">C · FreeRTOS</div></div></div>
+    <p>A real-time, multiplayer version of the game across two microcontrollers. Implemented the core game mechanics (random active-square selection, spin tracking, Whammy detection) with interrupt-driven I/O, and developed memory-mapped I/O and UART protocols for data exchange between the two boards, coordinated with FreeRTOS tasks and semaphores.</p>
+  </article>
+
+  <article class="chip">
+    <span class="notch"></span>
+    <div class="mark">PSOC 6 · CUSTOM PCB</div>
+    <div class="head"><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <rect x="6" y="8" width="36" height="32" rx="2"/>
+  <circle cx="12" cy="14" r="1.6" fill="currentColor" stroke="none"/><circle cx="36" cy="34" r="1.6" fill="currentColor" stroke="none"/>
+  <path d="M12 14h10v8h10M12 30h8M30 14v6" opacity=".7"/>
+  <circle cx="24" cy="26" r="4" class="r"/>
+</svg><div><h3>Whack-a-Mole on a custom board</h3><div class="sub">C · Altium Designer</div></div></div>
+    <p>An interactive hardware game built around a custom PCB. Created the schematic and a multi-layer layout in Altium Designer, assembled the board with surface-mount soldering and a reflow oven, and programmed the microcontroller to randomize mole positions, track input, and manage round timing.</p>
+  </article>
+  </div>
+
+  <footer class="foot">© 2026 Aayushi Singh</footer>
+</main>
+<script src="site.js"></script>
+</body>
+</html>

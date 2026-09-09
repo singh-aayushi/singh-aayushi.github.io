@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · Aayushi Singh</title>
+<meta name="description" content="Energy-aware cache replacement and energy-efficient LLM inference research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="side">
+  <nav class="mux" aria-label="Site">
+    <div class="mux-inputs"><a href="index.html" data-code="00" data-name="home"><span class="code">00</span><span>home</span></a><a href="research.html" data-code="01" data-name="research"><span class="code">01</span><span>research</span></a><a href="projects.html" data-code="10" data-name="projects"><span class="code">10</span><span>projects</span></a><a href="experience.html" data-code="11" data-name="experience"><span class="code">11</span><span>experience</span></a></div>
+    <div class="mux-body" aria-hidden="true">
+      <svg class="mx" viewBox="0 0 114 160" preserveAspectRatio="none">
+        <path class="body" d="M1,9.6 L113,35.2 L113,124.8 L1,150.4 Z"/>
+        <path class="w" data-on="00" d="M1,18.7 H10 L26,39 H60"/>
+        <path class="w" data-on="01" d="M1,59.5 H10 L26,63 H60"/>
+        <path class="w" data-on="10" d="M1,100.5 H10 L26,87 H60"/>
+        <path class="w" data-on="11" d="M1,141.3 H10 L26,111 H60"/>
+        <path class="w s" data-on="00 01" d="M28,44 V154.8"/>
+        <path class="w s" data-on="10 11" d="M36,92 V172"/>
+        <path class="w s" data-on="10 11" d="M36,172 V180"/>
+        <path class="w s" data-on="00 10" d="M46,49 V154.8"/>
+        <path class="w s" data-on="01 11" d="M54,73 V172"/>
+        <path class="w s" data-on="01 11" d="M54,172 V180"/>
+        <path class="w s" data-on="10 11" d="M36,172 H28 V166"/>
+        <path class="w s" data-on="01 11" d="M54,172 H46 V166"/>
+        <circle class="d s" data-on="10 11" cx="36" cy="172" r="1.4"/>
+        <circle class="d s" data-on="01 11" cx="54" cy="172" r="1.4"/>
+        <path class="g s" data-on="00 01" d="M24,166 L32,166 L28,158 Z"/>
+        <circle class="g s" data-on="00 01" cx="28" cy="156.4" r="1.6"/>
+        <path class="g s" data-on="00 10" d="M42,166 L50,166 L46,158 Z"/>
+        <circle class="g s" data-on="00 10" cx="46" cy="156.4" r="1.6"/>
+        <path class="w s" data-on="00 01" d="M28,44 H60"/><circle class="d s" data-on="00 01" cx="28" cy="44" r="1.4"/>
+        <path class="w s" data-on="00 10" d="M46,49 H60"/><circle class="d s" data-on="00 10" cx="46" cy="49" r="1.4"/>
+        <path class="w s" data-on="00 01" d="M28,68 H60"/><circle class="d s" data-on="00 01" cx="28" cy="68" r="1.4"/>
+        <path class="w s" data-on="01 11" d="M54,73 H60"/><circle class="d s" data-on="01 11" cx="54" cy="73" r="1.4"/>
+        <path class="w s" data-on="10 11" d="M36,92 H60"/><circle class="d s" data-on="10 11" cx="36" cy="92" r="1.4"/>
+        <path class="w s" data-on="00 10" d="M46,97 H60"/><circle class="d s" data-on="00 10" cx="46" cy="97" r="1.4"/>
+        <path class="w s" data-on="10 11" d="M36,116 H60"/><circle class="d s" data-on="10 11" cx="36" cy="116" r="1.4"/>
+        <path class="w s" data-on="01 11" d="M54,121 H60"/><circle class="d s" data-on="01 11" cx="54" cy="121" r="1.4"/>
+        <path class="w" data-on="00" d="M76,44 H81 V74 H90"/>
+        <path class="w" data-on="01" d="M76,68 H83 V78 H90"/>
+        <path class="w" data-on="10" d="M76,92 H83 V82 H90"/>
+        <path class="w" data-on="11" d="M76,116 H81 V86 H90"/>
+        <path class="w" data-on="00 01 10 11" d="M101,80 H113"/>
+        <path class="g" data-on="00" d="M60,36 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="01" d="M60,60 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="10" d="M60,84 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="11" d="M60,108 h8 a8,8 0 0 1 0,16 h-8 z"/>
+        <path class="g" data-on="00 01 10 11" d="M88,72 Q95,72 101,80 Q95,88 88,88 Q92,80 88,72 Z"/>
+      </svg>
+    </div>
+    <span class="mux-wire" aria-hidden="true"></span>
+  </nav>
+  <div class="links">
+    <a href="assets/Aayushi_Singh_Resume.pdf">
+      <span class="badge"><img src="assets/icons/resume.png" alt="" width="30" height="30"></span>
+      <span class="label">Resume</span>
+    </a>
+    <a href="mailto:aayushi.singh@wisc.edu">
+      <span class="badge"><img src="assets/icons/email.png" alt="" width="30" height="30"></span>
+      <span class="label">Email</span>
+    </a>
+    <a href="https://www.linkedin.com/in/aayushisingh030" target="_blank" rel="noopener">
+      <span class="badge"><img src="assets/icons/linkedin.png" alt="" width="30" height="30"></span>
+      <span class="label">LinkedIn</span>
+    </a>
+    <a href="https://github.com/singh-aayushi" target="_blank" rel="noopener">
+      <span class="badge"><img src="assets/icons/github.png" alt="" width="30" height="30"></span>
+      <span class="label">GitHub</span>
+    </a>
+  </div>
+</aside>
+
+<main>
+
+  <h1 class="page-title">Research</h1>
+  <div class="grid">
+
+  <article class="chip">
+    <span class="notch"></span>
+    <div class="mark">STACS · 2025 – NOW</div>
+    <div class="head"><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <rect x="16" y="6" width="16" height="7" rx="1" class="r" stroke="currentColor"/>
+  <rect x="11" y="18" width="26" height="7" rx="1"/>
+  <rect x="5" y="30" width="38" height="10" rx="1"/>
+  <path d="M24 13v5M24 25v5" stroke-dasharray="1.5 2"/>
+</svg><div><h3>Energy-aware cache replacement</h3><div class="sub">Prof. Joshua San Miguel · STACS Lab</div></div></div>
+    <p>Cache replacement policies are usually judged by hit rate alone, but not every insertion that helps hit rate is worth its energy cost. I am building simulation tooling that models cache access sequences under different replacement policies (LRU, FIFO, Belady's MIN) alongside an exhaustive oracle, validating each policy against brute-force ground truth across enumerated access sequences to identify replacements a policy makes without a real benefit to hit rate. So far, that analysis shows Belady's MIN, while optimal for hit rate, makes about 30% more evictions than necessary, with roughly one in ten sequences showing avoidable churn. The direction I am working toward is a replacement policy that targets eviction count directly, reducing that churn while keeping hit rate optimal.</p>
+  </article>
+
+  <article class="chip">
+    <span class="notch"></span>
+    <div class="mark">EDGE-LLM · 2024 – NOW</div>
+    <div class="head"><svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+  <rect x="12" y="12" width="24" height="24" rx="2"/>
+  <rect x="19" y="19" width="10" height="10" class="r" stroke="currentColor"/>
+  <path d="M17 12V6M24 12V6M31 12V6M17 42v-6M24 42v-6M31 42v-6M12 17H6M12 24H6M12 31H6M42 17h-6M42 24h-6M42 31h-6"/>
+</svg><div><h3>Energy-efficient LLM inference on edge hardware</h3><div class="sub">Prof. Setareh Behroozi · ECE</div></div></div>
+    <p>Large language models are typically quantized with one precision setting applied uniformly across the whole model, but different layers and operations tolerate lower precision very differently. I am building a selective bit-usage framework that splits model weights into fast-memory MSBs and on-demand LSBs, guided by saliency rather than fetched uniformly, to cut memory and compute cost for on-device inference. Saliency-guided bit masking on LLaMA-7B holds up substantially better than random masking as compression gets more aggressive, and I'm now extending evaluation to accuracy benchmarks and running an oracle-gap analysis to see how much headroom is left for allocating precision dynamically, per token, at runtime.</p>
+  </article>
+  </div>
+
+  <footer class="foot">© 2026 Aayushi Singh</footer>
+</main>
+<script src="site.js"></script>
+</body>
+</html>
