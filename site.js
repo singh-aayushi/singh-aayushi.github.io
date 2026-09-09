@@ -3,7 +3,8 @@
   const here = location.pathname.split("/").pop() || "index.html";
   let code = null;
   document.querySelectorAll(".mux-inputs a").forEach(a => {
-    const target = a.getAttribute("href").split("/").pop();
+    const href = a.getAttribute("href");
+    const target = href === "/" ? "index.html" : href.split("/").pop();
     if (target === here) {
       a.setAttribute("aria-current", "page");
       code = a.dataset.code;
