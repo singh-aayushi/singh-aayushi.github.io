@@ -162,7 +162,7 @@ h2.sec::before { content: ""; width: .5rem; height: .5rem; background: var(--ros
 footer.foot { margin-top: 4rem; color: var(--ink-2); font-size: .9rem; }
 
 /* ================= responsive ================= */
-@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .grid.three { grid-template-columns: 1fr; } .about { grid-template-columns: 1fr; } .portrait { max-width: 14rem; } }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .grid.three { grid-template-columns: 1fr; } .about { grid-template-columns: 1fr; } .portrait { max-width: 14rem; } .hero.about div:first-child { order: 2; } .hero.about div:last-child { order: 1; margin: 0 auto 1.5rem; } }
 @media (max-width: 760px) {
   body { grid-template-columns: 1fr; }
   aside.side { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 1.4rem 1.3rem 1.2rem; gap: 1.2rem; }
