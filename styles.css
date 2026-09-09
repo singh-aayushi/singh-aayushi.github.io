@@ -104,10 +104,13 @@ main { padding: 2.6rem clamp(1.4rem, 4vw, 4rem) 4rem; max-width: 66rem; width: 1
 .hero h1 { font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 400; letter-spacing: -0.015em; margin-bottom: 1rem; }
 .hero .lede { font-size: 1.3rem; color: var(--ink-2); max-width: 42ch; }
 .hero .lede em { color: var(--ink); }
-.hero.about { margin-bottom: 1rem; align-items: center; }
+.hero.about { margin-bottom: 1rem; display: grid; grid-template-columns: minmax(0, 1fr) 16rem; column-gap: 2.4rem; row-gap: .8rem; }
+.hero.about h1 { grid-column: 1; grid-row: 1; margin-bottom: 0; }
+.hero.about .bio { grid-column: 1; grid-row: 2; }
+.hero.about .photo { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
 .hero.about p { max-width: 58ch; }
 
-.page-title { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: .6rem; }
+.page-title { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 1.1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
 .page-intro { color: var(--ink-2); font-size: 1.15rem; margin-bottom: 2rem; }
 
 h2.sec { font-size: 1.05rem; color: var(--ink-2); margin: 3rem 0 1.2rem; display: flex; align-items: center; gap: .55rem; }
@@ -162,7 +165,13 @@ h2.sec::before { content: ""; width: .5rem; height: .5rem; background: var(--ros
 footer.foot { margin-top: 4rem; color: var(--ink-2); font-size: .9rem; }
 
 /* ================= responsive ================= */
-@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .grid.three { grid-template-columns: 1fr; } .about { grid-template-columns: 1fr; } .portrait { max-width: 14rem; } .hero.about div:first-child { order: 2; } .hero.about div:last-child { order: 1; margin: 0 auto 1.5rem; } }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .grid.three { grid-template-columns: 1fr; } .about { grid-template-columns: 1fr; } .portrait { max-width: 14rem; }
+  .hero.about { grid-template-columns: 1fr; }
+  .hero.about h1, .hero.about .bio, .hero.about .photo { grid-column: auto; grid-row: auto; }
+  .hero.about h1 { order: 1; }
+  .hero.about .photo { order: 2; margin: 0 auto 1.5rem; }
+  .hero.about .bio { order: 3; }
+}
 @media (max-width: 760px) {
   body { grid-template-columns: 1fr; }
   aside.side { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 1.4rem 1.3rem 1.2rem; gap: 1.2rem; }
