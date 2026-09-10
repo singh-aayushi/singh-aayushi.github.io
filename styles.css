@@ -191,6 +191,51 @@ aside.side {
   margin-right: -1.6rem;
 }
 
+/* collapsed mux for narrow screens (injected by site.js, hidden on desktop) */
+.mux-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.35rem 0;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid var(--rose);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.05rem;
+  text-align: left;
+  cursor: pointer;
+}
+.mux-toggle .code {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--rose);
+  flex: none;
+}
+.mux-toggle .name {
+  flex: 1;
+}
+.mux-toggle .glyph {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex: none;
+  transition: transform 0.3s ease;
+}
+.mux-toggle .glyph path {
+  fill: var(--panel);
+  stroke: var(--ink);
+  stroke-width: 6;
+}
+.mux-toggle .glyph .sel {
+  fill: none;
+  stroke: var(--rose);
+  stroke-width: 10;
+}
+.side.open .mux-toggle .glyph {
+  transform: rotate(90deg);
+}
+
 .side .links {
   display: flex;
   flex-direction: column;
@@ -607,24 +652,26 @@ footer.foot {
     padding: 1.4rem 1.3rem 1.2rem;
     gap: 1.2rem;
   }
-  .mux {
-    flex-direction: column;
+  /* the toggle row is the collapsed mux: current select code + page name */
+  .mux-toggle {
+    display: flex;
   }
-  .mux-inputs {
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 1rem;
+  /* full mux (inputs + diagram) lives in a collapsible grid row */
+  .mux-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.3, 0.8, 0.4, 1);
   }
-  .mux-inputs a {
-    flex-direction: column;
-    gap: 0.25rem;
-    padding: 0.2rem 0.4rem;
+  .mux-panel > .mux {
+    overflow: hidden;
+    max-width: 22rem;
+    min-height: 0;
   }
-  .mux-inputs a::after {
-    display: none;
+  .side.open .mux-panel {
+    grid-template-rows: 1fr;
   }
-  .mux-body {
-    display: none;
+  .side.open .mux-panel > .mux {
+    padding-top: 1rem;
   }
   .mux-wire {
     display: none;
