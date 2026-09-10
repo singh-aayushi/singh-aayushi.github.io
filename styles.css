@@ -217,23 +217,14 @@ aside.side {
   flex: 1;
 }
 .mux-toggle .glyph {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1rem;
+  height: 1rem;
   flex: none;
+  color: var(--ink-2);
   transition: transform 0.3s ease;
 }
-.mux-toggle .glyph path {
-  fill: var(--panel);
-  stroke: var(--ink);
-  stroke-width: 6;
-}
-.mux-toggle .glyph .sel {
-  fill: none;
-  stroke: var(--rose);
-  stroke-width: 10;
-}
 .side.open .mux-toggle .glyph {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 .side .links {
@@ -660,18 +651,49 @@ footer.foot {
   .mux-panel {
     display: grid;
     grid-template-rows: 0fr;
+    overflow: hidden;
     transition: grid-template-rows 0.3s cubic-bezier(0.3, 0.8, 0.4, 1);
   }
   .mux-panel > .mux {
-    overflow: hidden;
     max-width: 22rem;
     min-height: 0;
+    transition: padding 0.3s cubic-bezier(0.3, 0.8, 0.4, 1);
   }
   .side.open .mux-panel {
     grid-template-rows: 1fr;
   }
+  /* padding only while open so the collapsed row is truly 0 tall.
+     bottom: the NOT gates and select pins hang below the SVG viewBox (y 160 to 180).
+     right: room for the output wire. */
   .side.open .mux-panel > .mux {
-    padding-top: 1rem;
+    padding: 1rem 1.2rem 1.9rem 0;
+  }
+  /* output wire: leaves the mux body, then drops to the page edge;
+     the aside's bottom border turns rose while open, so Y lands on the page */
+  .mux-body {
+    position: relative;
+  }
+  .mux-body::before,
+  .mux-body::after {
+    content: "";
+    position: absolute;
+    background: var(--rose);
+  }
+  .mux-body::before {
+    left: 100%;
+    top: calc(50% - 1px);
+    width: 1rem;
+    height: 2px;
+  }
+  .mux-body::after {
+    left: calc(100% + 1rem - 2px);
+    top: calc(50% - 1px);
+    bottom: -1.9rem;
+    width: 2px;
+  }
+  .side.open {
+    padding-bottom: 0;
+    border-bottom: 2px solid var(--rose);
   }
   .mux-wire {
     display: none;

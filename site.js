@@ -40,9 +40,8 @@
   btn.innerHTML =
     '<span class="code">' + (code ?? "--") + "</span>" +
     '<span class="name">' + (name || "menu") + "</span>" +
-    '<svg class="glyph" viewBox="0 0 114 160" aria-hidden="true">' +
-    '<path d="M4,12 L110,36 L110,124 L4,148 Z"/>' +
-    '<path class="sel" d="M57,124 V150"/>' +
+    '<svg class="glyph" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M3 6l5 5 5-5"/>' +
     "</svg>";
   side.insertBefore(btn, panel);
 
